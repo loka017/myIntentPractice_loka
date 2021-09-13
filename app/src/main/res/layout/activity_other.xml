@@ -5,15 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".OtherActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다른화면으로 들어온 상태"/>
 
     <Button
-        android:id="@+id/moveToBtn"
+        android:id="@+id/returnToMainBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="화면이동"/>
-
+        android:text="이전 화면 이동"/>
 
 </LinearLayout>
