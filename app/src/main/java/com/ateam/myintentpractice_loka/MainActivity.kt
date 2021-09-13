@@ -6,9 +6,19 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+//    멤버변수
+    val REQ_FOR_NICKNAME = 2222
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        editNicknameBtn.setOnClickListener {
+
+            val myIntent = Intent(this, EditNicknameActivity2::class.java)
+            startActivityForResult(myIntent, REQ_FOR_NICKNAME)
+        }
+
 
         sendMessageBtn.setOnClickListener {
 
