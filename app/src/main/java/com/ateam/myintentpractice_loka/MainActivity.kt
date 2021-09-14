@@ -14,11 +14,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        kakaoStoreBtn.setOnClickListener {
+
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+
+        }
+
+        naverWebBtn.setOnClickListener {
+
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+
+        }
+
         smsBtn.setOnClickListener {
 
 //            phonNumEdt에 입력한 전화번호를 받아서 +.해당 번호에 전화 연결
-            val inputPhonNum = phoneNumEdt.text.toString()
-            val myUri = Uri.parse("smsto:${inputPhonNum}")
+            val inputPhoneNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhoneNum}")
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
             myIntent.putExtra("sms_body", "미리내용 입력")
             startActivity(myIntent)
