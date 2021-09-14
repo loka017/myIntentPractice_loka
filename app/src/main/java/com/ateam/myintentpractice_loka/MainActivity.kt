@@ -14,16 +14,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        smsBtn.setOnClickListener {
+
+//            phonNumEdt에 입력한 전화번호를 받아서 +.해당 번호에 전화 연결
+            val inputPhonNum = phoneNumEdt.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhonNum}")
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms_body", "미리내용 입력")
+            startActivity(myIntent)
+        }
+
         callBtn.setOnClickListener {
 
 //            phonNumEdt에 입력한 전화번호를 받아서 +.해당 번호에 전화 연결
-
             val inputPhonNum = phoneNumEdt.text.toString()
-
             val myUri = Uri.parse("tel:${inputPhonNum}")
-
             val myIntent = Intent(Intent.ACTION_CALL, myUri)
-
             startActivity(myIntent)
         }
 
