@@ -18,7 +18,7 @@ class EditNicknameActivity2 : AppCompatActivity() {
 //            입력한 닉네임을 가지고 메인으로 복귀
 //            입력한 닉제임을 담아주기 위환 용도로만 사용하는 Intent
             val resultIntent = Intent()
-            resultIntent.putExtra("nicknme", inputNickname)
+            resultIntent.putExtra("nickname", inputNickname)
             setResult(RESULT_OK, resultIntent)
             finish()
         }
