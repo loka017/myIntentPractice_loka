@@ -63,7 +63,7 @@
         android:text="연결할 전화번호"/>
 
     <EditText
-        android:id="@+id/phoneNum"
+        android:id="@+id/phoneNumEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="전화번호 입력"
